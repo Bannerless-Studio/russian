@@ -150,6 +150,10 @@ weak words.
 The passages and questions are machine-written by Claude, checked by an
 automated QA pass; they have not had a native-speaker review.
 
+A passage's Today spaced re-read (after 7 days) becomes a listening pass
+when audio is available for every sentence: the text stays hidden and about
+half the questions are audio-only.
+
 ## Sources and licences
 
 | Data | Source | Licence | Used for |
