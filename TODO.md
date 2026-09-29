@@ -67,3 +67,4 @@ See `tools/REPORT.md` for the rules already in place.
   Then run `git submodule update --remote engine` and rebuild.
 - Browser verification is still to do: ru-RU TTS voice, typing without ё or
   stress, the pron toggle showing stress marks, and audio playback.
+- Republish 09e90bc: sentence spans (19114/19118 linked words placed); inflected forms now cloze targets.
