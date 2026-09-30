@@ -26,9 +26,9 @@ speaking practice, which this app does not teach.
 **Data quality:** after QA round 2, the hand-checked samples are as follows. A 60-word stratified sample (seed 31) has 60/60 correct primary senses, and every A1 and A2 gloss was hand-skimmed. There are 0 wrong parts of speech in the top 300 by rank. A 90-sentence sample (seed 32) has 4 wrong word links out of 523 (99.2%), and 86/90 sentences are fully correct. All 2,000 words carry `pron` (1,716 with a stress mark; one-vowel and ё words need none). Every word has at least one example sentence, and 1,076 of 3,203 sentences have permissive native audio. Word ids are frozen in `tools/id_map_v1.json`, so learner progress survives rebuilds. Known residuals are listed in `TODO.md`, and the rules and counts are in `tools/REPORT.md`.
 
 **Content policy:** sentences on sexual content, suicide, threats/violence,
-dying/death wishes or weapons are kept out of A1/A2. убить and убийство sit
-at A1 by subtitle frequency, but their example sentences are held to B1 by
-this filter; the words stay. Sentences about rape or sexual/child abuse are
+dying/death wishes or weapons are kept out of A1/A2. убить, убийство and
+стрелять sit at B1 under the shared word-level ceiling, and their example
+sentences are held to B1 by this filter. Sentences about rape or sexual/child abuse are
 removed at every level. Four profanity words (ублюдок, сука, сучка, хер) are
 cut by a hand list. See `TODO.md` for the exact rule history and counts.
 

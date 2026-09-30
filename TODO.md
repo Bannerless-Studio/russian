@@ -68,3 +68,4 @@ See `tools/REPORT.md` for the rules already in place.
 - Browser verification is still to do: ru-RU TTS voice, typing without ё or
   stress, the pron toggle showing stress marks, and audio playback.
 - Republish 09e90bc: sentence spans (19114/19118 linked words placed); inflected forms now cloze targets.
+- Republish ef44c6e: стрелять A2->B1 (band edge: техника B1->A2); no override keys deleted; set-counter and no-voice planner fixes
