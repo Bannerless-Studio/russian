@@ -69,3 +69,7 @@ See `tools/REPORT.md` for the rules already in place.
   stress, the pron toggle showing stress marks, and audio playback.
 - Republish 09e90bc: sentence spans (19114/19118 linked words placed); inflected forms now cloze targets.
 - Republish ef44c6e: стрелять A2->B1 (band edge: техника B1->A2); no override keys deleted; set-counter and no-voice planner fixes
+
+## Republish 7b8c173 (2026-10-08, port wave 3)
+- Republish 7b8c173: typed modes, day-aware scheduling, reading rotation, goals, pairs, frequency tiers, Progress v2, redesigned tabs, session estimates. Pack diff vs fe88110: every word gains `ft` (100 ambient / 1385 core / 515 peripheral), pack.json gains the generic flag set + `eta`; nothing else (tools/eta.json from `eta_checks --calibrate --sessions 600`: gain 0.005368 / 0.003294 / 0.002695, known 7.668, all gates PASS 3/3). check.sh runs `packbuilder enrich --check`.
+- Migration proof: rollback hash fe88110dc4341ebc003ab27072bab181eb4fba30; previous live md5 index c418dd4a0e023ee8d14aff1cd47e0eaf, sw a5850f475a1170dd9904f647373d3be9. Storage: new fields day/sn/t/u/f/p/pm/pv/pause/read.done s,ls/today.tw on first use; boot writes nothing; previous build ef44c6e/aa00571 carries them (migration [port] 9/9).
