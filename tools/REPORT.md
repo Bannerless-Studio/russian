@@ -42,15 +42,16 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 874, 'verb': 502, 'adj'
 
 ## Sentences
 
-- Final sentences: **3,203**, 1,076 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
+- Final sentences: **3,204**, 1,077 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
+- Sentence ids (`tools/sentence_ids_v1.json`): 3,202 kept, 2 new (s3204, s3205), 1 retired.
 - Word coverage: 0 = 0, 1 = 8, 2 = 1992.
-- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 448,287. Rejected for a content lemma outside pack/top-3000: 224,445.
-- Primary word level of each sentence: {'A1': 788, 'A2': 1156, 'B1': 1259}.
+- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 448,306. Rejected for a content lemma outside pack/top-3000: 224,445.
+- Primary word level of each sentence: {'A1': 789, 'A2': 1156, 'B1': 1259}.
 - Token-length distribution of the final set:
 
 | tokens | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| sentences | 238 | 643 | 411 | 924 | 782 | 119 | 42 | 22 | 10 | 5 | 7 |
+| sentences | 239 | 644 | 410 | 924 | 782 | 119 | 42 | 22 | 10 | 5 | 7 |
 
 ## Kelly CEFR cross-check (sanity only, not shipped)
 
@@ -80,10 +81,10 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 874, 'verb': 502, 'adj'
   13 мы [pron] we
   14 так [adv] so, like this
   15 как [conj] how; as, like
-  16 вы [pron] you
+  16 вы [pron] you (polite or plural)
   17 она [pron] she, it
   18 у [prep] at, by, near
-  19 то [pron] that
+  19 то [pron] that (thing); then (in if…then)
   20 но [conj] but, yet
   21 по [prep] along, on, by, according to
   22 мочь [verb] can, to be able to (impf.)
@@ -100,7 +101,7 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 874, 'verb': 502, 'adj'
   33 который [pron] which, who, that
   34 свой [det] one's own (my, your, his...)
   35 мой [det] my, mine
-  36 же [part] after all, really (emphasis)
+  36 же [part] indeed, after all (emphatic particle)
   37 знать [verb] to know (impf.)
   38 если [conj] if, in case
   39 бы [part] would (conditional particle)
@@ -114,7 +115,7 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 874, 'verb': 502, 'adj'
   47 чтобы [conj] so that, in order that
   48 кто [pron] who
   49 сказать [verb] to say, to tell (pf.)
-  50 тот [det] that
+  50 тот [det] that (one); the other
   51 только [part] only, just
   52 время [noun] time (n)
   53 один [num] one
@@ -137,11 +138,11 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 874, 'verb': 502, 'adj'
   70 день [noun] day, daytime (m)
   71 другой [adj] other, another, different
   72 где [adv] where
-  73 самый [adj] the very; the most
+  73 самый [adj] the most; the very
   74 люди [noun] people (pl.)
   75 делать [verb] to do, to make (impf.)
   76 человек [noun] person, human being (m)
-  77 твой [det] your, yours
+  77 твой [det] your, yours (informal)
   78 сейчас [adv] now
   79 здесь [adv] here
   80 жизнь [noun] life (f)
@@ -159,12 +160,12 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 874, 'verb': 502, 'adj'
   92 новый [adj] new
   93 видеть [verb] to see (impf.)
   94 теперь [adv] now, at present
-  95 об [prep] about, of, on
+  95 об [prep] about (о before a vowel)
   96 два [num] two
   97 друг [noun] friend (m)
   98 место [noun] place, spot (n)
   99 после [prep] after
- 100 ли [part] if, whether
+ 100 ли [part] whether, if (question particle)
 ```
 
 <!-- manual:begin -->
@@ -205,4 +206,10 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 874, 'verb': 502, 'adj'
   - Gloss-level scan (shared vulgar/sexual English list): a matching sense never leads a gloss; check fails on any A1/A2 match.
 - Word ids are frozen in tools/id_map_v1.json (key: folded lemma|pos).
 - 2026-09-25: engine bumped to 059b90b (voice-init fix, no-voice notice timing, word ceiling). 8 words moved A2->B1 under the shared word-level ceiling: убить, убийство, кровь, оружие, погибнуть, убивать, секс, убийца. Band-edge shifts from re-counting: народ, область, держать A2->A1; сад, потеря, появляться, единый, выпустить, вера, использование, ответственность B1->A2. No rank, id or gloss changed.
+## Gloss and tier QA pass (2026-10-14)
+
+- All 2000 glosses read. 280 `en` changed (270 new or edited keys in gloss_overrides.json, now 456 keys): wrong or rare sense first, explanation-first, duplicate A1/A2 meanings disambiguated (aspect pairs left as is), motion and register qualifiers. One pron follows a gloss (молодец -> молоде́ц).
+- Tiers: tools/tiers_overrides.json, 101 entries by id (55 forced A1 basics peripheral -> core, 2 ambient -> core, 33 spoken basics -> core, 11 genre artefacts core -> peripheral).
+- Sample seed 505: 60/60 words correct sense, 60/60 sentences fully correct, 346 links; sense mismatches found and re-glossed: курс, вызывать, стоить.
+- Id stability proven before editing: 2000 word ids identical, unchanged-text sentence ids identical.
 <!-- manual:end -->
