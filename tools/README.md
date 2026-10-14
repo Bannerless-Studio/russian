@@ -14,7 +14,7 @@ before touching any file here; it says what is hand-maintained vs generated.
   high-frequency words; all A1/A2 glosses were hand-skimmed in QA round 2.
 - `forced_a1.txt` — hand-maintained. A1 core word list forced into A1 (closed
   sets live in `langs/ru.py` instead).
-- `passages_src.json` — hand-maintained. Source text for the 60 reading
+- `passages_src.json` — hand-maintained. Source text for the 80 reading
   passages; `packbuilder passages --lang ru` builds `pack/passages.json` from it.
 - `id_map_v1.json` — generated, then frozen. Maps (lemma, POS) to a fixed
   word id across rebuilds. Never hand-edit; never renumber.

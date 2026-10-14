@@ -43,13 +43,13 @@ See `tools/REPORT.md` for the rules already in place.
   through the shared fallback for A1 words with fewer than 2 candidates.
 
 ## Reading passages
-- A native-speaker pass over the 60 texts has not been done yet; only an
+- A native-speaker pass over the 80 texts has not been done yet; only an
   automated QA pass plus manual QA rounds (see `tools/REPORT_passages.md`).
 - The pack is subtitle-ranked, so several everyday words are missing from
-  the word list (кафе, торт, бегать, советовать, по-русски); the 60 texts
+  the word list (кафе, торт, бегать, советовать, по-русски); the 80 texts
   avoid them. Adding these belongs in a v2 word-list pass, not the passage
   linker.
-- 21 out-of-pack lemmas remain across the 60 passages, each needed by its
+- 21 out-of-pack lemmas remain across the 80 passages, each needed by its
   topic and declared with a reason (recipe steps, собеседование, спектакль,
   зонт, приют, ёлка...); unlinked tokens otherwise are names, quoted
   titles, and the numerals двухсот/оба.

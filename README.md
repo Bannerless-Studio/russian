@@ -34,8 +34,8 @@ cut by a hand list. See `TODO.md` for the exact rule history and counts.
 
 ## Reading passages (Read tab)
 
-60 short reading texts, 20 each at A1, A2 and B1, with comprehension
-questions each. A level's 20 passages unlock once you've learned 70% of that
+80 short reading texts, 20 at A1 and 30 each at A2 and B1, with comprehension
+questions each. A level's passages unlock once you've learned 70% of that
 level's words. Tapping any word in a passage shows its gloss, including
 inflected forms. Comprehension questions feed missed words back into the
 review queue as weak words. The passages and questions are machine-written,
